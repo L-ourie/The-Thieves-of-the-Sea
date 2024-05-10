@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccxf8rko0gm7g"]
+[gd_scene load_steps=5 format=3 uid="uid://d273lnhitnly7"]
 
 [ext_resource type="Script" path="res://Scripts/fsp_controller.gd" id="1_dtax0"]
 
@@ -24,3 +24,7 @@ mesh = SubResource("CapsuleMesh_1d3mo")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.659603, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CameraController"]
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="CameraController/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.659603, 0)
+update_mode = 1

@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://b72aydjl0b4yn"]
+[gd_scene load_steps=2 format=3 uid="uid://dxenbjtbbs33g"]
+
+[ext_resource type="PackedScene" uid="uid://d273lnhitnly7" path="res://fsp_controller.tscn" id="1_fw3op"]
 
 [node name="Water" type="Node3D"]
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_fw3op")]
+transform = Transform3D(2.035, 0, 0, 0, 2.035, 0, 0, 0, 2.035, 0, 9.04318, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(13.945, 0, 0, 0, 13.945, 0, 0, 0, 13.945, 0, 0, 0)
+use_collision = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.6101, 10.6322)

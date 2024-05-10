@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccxf8rko0gm7g"]
+
+[ext_resource type="Script" path="res://Scripts/fsp_controller.gd" id="1_dtax0"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_k7i1a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_axba6"]
+albedo_color = Color(1, 0, 0, 1)
+roughness = 0.3
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_1d3mo"]
+material = SubResource("StandardMaterial3D_axba6")
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_dtax0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_k7i1a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+mesh = SubResource("CapsuleMesh_1d3mo")
+
+[node name="CameraController" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.659603, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CameraController"]
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="CameraController/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.659603, 0)
+update_mode = 1
