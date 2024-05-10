@@ -15,6 +15,14 @@ data = PackedVector3Array(-10, 0.25, 10, 10, 0.25, 10, -10, -0.25, 10, 10, 0.25,
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("1_ki5ek")]
 
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.660278, 0.547435, -0.514147, 0.157458, 0.568476, 0.807491, 0.734329, -0.614125, 0.289154, 478.357, -525.388, 499.397)
+light_color = Color(0.933333, 0.701961, 0.152941, 1)
+light_energy = 5.486
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+sky_mode = 1
+
 [node name="Floor" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 mesh = SubResource("BoxMesh_gd0ev")
