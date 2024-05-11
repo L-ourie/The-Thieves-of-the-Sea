@@ -1,4 +1,5 @@
 extends CharacterBody3D
+#setting variables
 @export var SPEED_CROUCH : float = 2.0
 @export var TOGGLE_CROUCH: bool = true
 @export var SPEED_DEFAULT : float = 5.0
@@ -10,6 +11,9 @@ extends CharacterBody3D
 @export var CAMERA_CONTROLLER : Camera3D#controls camera
 @export var ANIMATIONPLAYER : AnimationPlayer
 @export var CROUCH_SHAPECAST: Node3D
+@export var ACCELERTION : float = 0.1
+@export var DECELERATION : float = 0.25
+@export var SPEED_SPRINTING : float = 7.0
 
 var _speed : float
 var _mouse_input : bool = false
@@ -96,11 +100,11 @@ func _physics_process(delta):
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
 	if direction:
-		velocity.x = direction.x * _speed
-		velocity.z = direction.z * _speed
+		velocity.x = lerp(velocity.x,direction.x  * _speed, ACCELERTION) # lerp is gradually increasing our set speed
+		velocity.z = lerp(velocity.z,direction.z  * _speed, ACCELERTION)
 	else:
-		velocity.x = move_toward(velocity.x, 0, _speed)
-		velocity.z = move_toward(velocity.z, 0, _speed)
+		velocity.x = move_toward(velocity.x, 0, DECELERATION)
+		velocity.z = move_toward(velocity.z, 0, DECELERATION)
 
 	move_and_slide()
 func toggle_crouch():
