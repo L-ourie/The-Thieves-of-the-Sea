@@ -18,6 +18,7 @@ var _tilt_input : float
 var _mouse_rotation : Vector3
 var _player_rotation : Vector3
 var _camera_rotation : Vector3
+var frames_per_second : String
 
 var _is_crouching : bool = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -63,6 +64,7 @@ func _update_camera(delta):
 	_tilt_input = 0.0
 	
 func _ready():
+	Global.player = self
 
 	# Get mouse input
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -72,9 +74,12 @@ func _ready():
 	#add crouch check shapecast collision exception for our character	
 	CROUCH_SHAPECAST.add_exception($".")
 func _physics_process(delta):
-	
+	frames_per_second = "%.2f"%(1.0/delta)
 	# Update camera movement based on mouse movement
 	_update_camera(delta)
+	Global.debug.add_property("MovementSpeed",_speed,1)
+	Global.debug.add_property("MouseRotation",_mouse_rotation,2)
+	Global.debug.add_property("FPS",frames_per_second,3)
 	
 	# Add the gravity.
 	if not is_on_floor():
