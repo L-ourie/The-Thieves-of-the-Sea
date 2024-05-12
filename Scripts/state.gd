@@ -1,21 +1,17 @@
-class_name State# class name let you reference the script easily
+class_name State
 
 extends Node
 
-signal transition(new_state_name:StringName)#used to communicate between scripts
-#four functions to hanlde transtion to different states
+signal transition(new_state_name: StringName)
 
-func enter() ->void:
-	pass
-
-func exit() ->void:
-	pass
-
-func update(delta: float) ->void:#procces function
+func enter() -> void:
 	pass
 	
-func physics_update(delta:float)-> void:#physics process
+func exit() -> void:
 	pass
 	
-
-
+func update(delta: float) -> void:
+	pass
+ 
+func physics_update(delta: float) -> void:
+	pass
