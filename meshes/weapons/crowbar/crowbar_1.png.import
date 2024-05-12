@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d04ibgf5hv73x"
-path.s3tc="res://.godot/imported/Survival_Melee_Weapon_4_DefaultMaterial_No.png-863972a7e5332d82f4df9e6bb52206df.s3tc.ctex"
+uid="uid://dbcwape83dyb8"
+path.s3tc="res://.godot/imported/crowbar_1.png-7a5b7fd0eeb78ec87e1112acd2563fb3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://weapons/survival-melee-weapon-4/textures/Survival_Melee_Weapon_4_DefaultMaterial_No.png"
-dest_files=["res://.godot/imported/Survival_Melee_Weapon_4_DefaultMaterial_No.png-863972a7e5332d82f4df9e6bb52206df.s3tc.ctex"]
+source_file="res://meshes/weapons/crowbar/crowbar_1.png"
+dest_files=["res://.godot/imported/crowbar_1.png-7a5b7fd0eeb78ec87e1112acd2563fb3.s3tc.ctex"]
 
 [params]
 
@@ -24,8 +25,8 @@ compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://weapons/survival-melee-weapon-4/textures/Survival_Melee_Weapon_4_DefaultMaterial_No.png"
+roughness/mode=8
+roughness/src_normal="res://meshes/crowbar_2.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

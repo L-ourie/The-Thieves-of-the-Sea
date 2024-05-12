@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjdtshcv4m887"
-path.s3tc="res://.godot/imported/Survival_Melee_Weapon_4_DefaultMaterial_Ro.png-a268e1bf6a954284c9d7df3bed79ac9b.s3tc.ctex"
+path.s3tc="res://.godot/imported/Survival_Melee_Weapon_4_DefaultMaterial_Ro.png-b6a594bba4ad3fd4cd18883a9df875fc.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://weapons/survival-melee-weapon-4/textures/Survival_Melee_Weapon_4_DefaultMaterial_Ro.png"
-dest_files=["res://.godot/imported/Survival_Melee_Weapon_4_DefaultMaterial_Ro.png-a268e1bf6a954284c9d7df3bed79ac9b.s3tc.ctex"]
+source_file="res://meshes/survival-melee-weapon-4/textures/Survival_Melee_Weapon_4_DefaultMaterial_Ro.png"
+dest_files=["res://.godot/imported/Survival_Melee_Weapon_4_DefaultMaterial_Ro.png-b6a594bba4ad3fd4cd18883a9df875fc.s3tc.ctex"]
 
 [params]
 

@@ -16,4 +16,5 @@ ao_enabled = true
 [node name="Survival Melee Weapon 4" instance=ExtResource("1_3pbvb")]
 
 [node name="Cylinder" parent="RootNode" index="0"]
+layers = 2
 material_override = SubResource("StandardMaterial3D_rr6hy")

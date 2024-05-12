@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dxpmb10hclcc0"
-path="res://.godot/imported/Survival Melee Weapon 4.fbx-4ad2466fc1e51d779328302e68991d2a.scn"
+path="res://.godot/imported/Survival Melee Weapon 4.fbx-aef33e870d2274f10661776ad3b982a4.scn"
 
 [deps]
 
-source_file="res://weapons/survival-melee-weapon-4/source/Survival Melee Weapon 4.fbx"
-dest_files=["res://.godot/imported/Survival Melee Weapon 4.fbx-4ad2466fc1e51d779328302e68991d2a.scn"]
+source_file="res://meshes/survival-melee-weapon-4/source/Survival Melee Weapon 4.fbx"
+dest_files=["res://.godot/imported/Survival Melee Weapon 4.fbx-aef33e870d2274f10661776ad3b982a4.scn"]
 
 [params]
 
