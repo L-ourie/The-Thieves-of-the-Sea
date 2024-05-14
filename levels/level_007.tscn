@@ -76,7 +76,7 @@ shader = SubResource("Shader_cwof1")
 shader_parameter/albedo = Color(0.0196078, 0.054902, 0.0196078, 1)
 shader_parameter/point_size = 0.0
 shader_parameter/roughness = 0.252
-shader_parameter/metallic_texture_channel = Plane(1, 0, 0, 0)
+shader_parameter/metallic_texture_channel = null
 shader_parameter/specular = 1.0
 shader_parameter/metallic = 0.0
 shader_parameter/uv1_blend_sharpness = 1.0
@@ -115,7 +115,6 @@ shape = SubResource("ConcavePolygonShape3D_hvhu4")
 
 [node name="FPSController" parent="." instance=ExtResource("3_j2ul6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
-TOGGLE_CROUCH = false
 
 [node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="."]
 multimesh = SubResource("MultiMesh_g3xta")
