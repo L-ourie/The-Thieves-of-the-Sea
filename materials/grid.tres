@@ -1,8 +1,9 @@
-[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cn1gsy15bkaff"]
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://cn1gsy15bkaff"]
 
-[ext_resource type="Texture2D" uid="uid://ivvpsi314b34" path="res://textures/grid.jpg" id="1_ygwta"]
+[ext_resource type="Texture2D" uid="uid://ddsr1o8snmsl5" path="res://textures/texture_03.png" id="1_w0xc0"]
+[ext_resource type="Texture2D" uid="uid://ivvpsi314b34" path="res://textures/grid.jpg" id="2_wvc1q"]
 
-[sub_resource type="Shader" id="Shader_cwof1"]
+[sub_resource type="Shader" id="Shader_xhlsx"]
 code = "// NOTE: Shader automatically converted from Godot Engine 4.1.dev4's StandardMaterial3D.
 
 shader_type spatial;
@@ -62,17 +63,17 @@ void fragment() {
 
 [resource]
 render_priority = 0
-shader = SubResource("Shader_cwof1")
+shader = SubResource("Shader_xhlsx")
 shader_parameter/albedo = Color(0, 0, 0, 1)
 shader_parameter/point_size = 0.0
-shader_parameter/roughness = 0.5
+shader_parameter/roughness = 0.0
 shader_parameter/metallic_texture_channel = null
 shader_parameter/specular = 0.5
 shader_parameter/metallic = 0.0
 shader_parameter/uv1_blend_sharpness = 1.0
-shader_parameter/uv1_scale = Vector3(0.25, 0.25, 0.25)
+shader_parameter/uv1_scale = Vector3(2, 2, 2)
 shader_parameter/uv1_offset = Vector3(0.5, 0.5, 0.5)
 shader_parameter/uv2_scale = Vector3(1, 1, 1)
 shader_parameter/uv2_offset = Vector3(0, 0, 0)
-shader_parameter/texture_albedo = ExtResource("1_ygwta")
-shader_parameter/texture_roughness = ExtResource("1_ygwta")
+shader_parameter/texture_albedo = ExtResource("1_w0xc0")
+shader_parameter/texture_roughness = ExtResource("2_wvc1q")

@@ -6,8 +6,8 @@ class_name WalkingPlayerState extends PlayerMovementState
 @export var TOP_ANIM_SPEED : float = 2.2
 
 func enter(previous_state) -> void:
-	if ANIMATION.is_playing() and ANIMATION.current_animation == "JumpEnd":# if the animation is our jump ending
-		await ANIMATION.animation_finished	#lets it finsih the jump ending
+	if ANIMATION.is_playing() and ANIMATION.current_animation == "JumpEnd":
+		await ANIMATION.animation_finished
 		ANIMATION.play("Walking",-1.0,1.0)
 	else:
 		ANIMATION.play("Walking",-1.0,1.0)
@@ -28,12 +28,12 @@ func update(delta):
 	if Input.is_action_pressed("crouch") and PLAYER.is_on_floor():
 		transition.emit("CrouchingPlayerState")
 	
-	if Input.is_action_just_pressed("jump") and PLAYER.is_on_floor():
-		transition.emit("JumpingPlayerState")
-	
 	if PLAYER.velocity.length() == 0.0:
 		transition.emit("IdlePlayerState")
-
+		
+	if Input.is_action_just_pressed("jump") and PLAYER.is_on_floor():
+		transition.emit("JumpingPlayerState")
+		
 	if PLAYER.velocity.y < -3.0 and !PLAYER.is_on_floor():
 		transition.emit("FallingPlayerState")
 
