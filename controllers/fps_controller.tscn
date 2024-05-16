@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://c3ffql15mo0aj"]
+[gd_scene load_steps=29 format=3 uid="uid://c3ffql15mo0aj"]
 
 [ext_resource type="Script" path="res://controllers/scripts/fps_controller.gd" id="1_472ow"]
 [ext_resource type="Material" uid="uid://b4gwd5h7ixvct" path="res://materials/player.tres" id="2_nqjka"]
@@ -17,7 +17,6 @@
 [ext_resource type="Script" path="res://controllers/scripts/FallingPlayerState.gd" id="14_qibcg"]
 [ext_resource type="Script" path="res://controllers/scripts/WeaponViewport.gd" id="15_1p6lx"]
 [ext_resource type="Script" path="res://controllers/scripts/WeaponCamera.gd" id="16_0jtnf"]
-[ext_resource type="PackedScene" uid="uid://dpvcmyj8t5s3d" path="res://flashlight.tscn" id="18_2n86b"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u6tj1"]
 
@@ -495,7 +494,7 @@ WEAPON_TYPE = ExtResource("4_b5o7d")
 libraries = {
 "": SubResource("AnimationLibrary_m2i2j")
 }
-blend_times = [&"JumpEnd", &"JumpStart", 0.1, &"JumpEnd", &"Walking", 0.5, &"JumpStart", &"Walking", 0.5, &"Crouching", &"Sprinting", 0.5, &"Crouching", &"Walking", 0.5, &"Sprinting", &"Crouching", 0.5, &"Sprinting", &"Walking", 0.5, &"Walking", &"Sprinting", 0.5, &"Walking", &"Walking", 0.5]
+blend_times = [&"Sprinting", &"Crouching", 0.5, &"Sprinting", &"Walking", 0.5, &"Crouching", &"Sprinting", 0.5, &"Crouching", &"Walking", 0.5, &"JumpEnd", &"JumpStart", 0.1, &"JumpEnd", &"Walking", 0.5, &"JumpStart", &"Walking", 0.5, &"Walking", &"Sprinting", 0.5, &"Walking", &"Walking", 0.5]
 
 [node name="ShapeCast3D" type="ShapeCast3D" parent="."]
 unique_name_in_owner = true
@@ -611,8 +610,3 @@ visible = false
 cull_mask = 1048574
 script = ExtResource("16_0jtnf")
 MAIN_CAMERA = NodePath("../../../CameraController/Camera3D/WeaponRig")
-
-[node name="FlashLightrig" type="Node3D" parent="."]
-
-[node name="flashlight0417" parent="FlashLightrig" instance=ExtResource("18_2n86b")]
-transform = Transform3D(-0.99916, -0.0316993, -0.0259818, -0.0346394, 0.991942, 0.121869, 0.0219093, 0.122667, -0.992206, 0.094, 1.40921, -0.128)
