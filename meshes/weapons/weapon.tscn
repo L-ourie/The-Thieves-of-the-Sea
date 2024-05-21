@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://v8g6dodhumyk"]
+[gd_scene load_steps=16 format=3 uid="uid://v8g6dodhumyk"]
 
 [ext_resource type="Script" path="res://meshes/weapons/init_weapon.gd" id="1_glfna"]
 [ext_resource type="Resource" uid="uid://evw4ypfnw256" path="res://meshes/weapons/crowbar/crowbar.tres" id="2_mjg5x"]
@@ -6,6 +6,90 @@
 [ext_resource type="Shader" path="res://meshes/weapons/weapon_shadow.gdshader" id="4_b2j6q"]
 [ext_resource type="PackedScene" uid="uid://cuciejw1mnbdr" path="res://flashlight.tscn" id="5_oager"]
 [ext_resource type="Script" path="res://flashlight.gd" id="6_mm2e1"]
+
+[sub_resource type="Animation" id="Animation_r8uib"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.54811, -0.44855, -0.34383)]
+}
+
+[sub_resource type="Animation" id="Animation_eatvj"]
+resource_name = "flaslight"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.54811, -0.44855, -0.34383), Vector3(1.2352, -0.0869019, -0.844807)]
+}
+
+[sub_resource type="Animation" id="Animation_h5rtt"]
+resource_name = "closeflashlight"
+length = 0.5
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array()
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.51669, -0.551956, -1.27418), Vector3(-1.54811, -0.44855, -0.34383)]
+}
+
+[sub_resource type="Animation" id="Animation_40x5u"]
+resource_name = "moveflashlightf"
+length = 0.5
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.324801, 0.453124, 0.0101725, 0.5, 1, -0.369723, 0.0871998, 0.0165451)
+
+[sub_resource type="Animation" id="Animation_8ssji"]
+resource_name = "moveflashlightb"
+length = 0.5
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.369723, 0.0871998, 0.0165451, 0.5, 1, -0.337772, 0.347466, 0.0120126)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3adqk"]
+_data = {
+"RESET": SubResource("Animation_r8uib"),
+"closeflashlight": SubResource("Animation_h5rtt"),
+"flaslight": SubResource("Animation_eatvj"),
+"moveflashlightb": SubResource("Animation_8ssji"),
+"moveflashlightf": SubResource("Animation_40x5u")
+}
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hypv6"]
 render_priority = 0
@@ -44,47 +128,22 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_k8gve")
 
-[sub_resource type="Animation" id="Animation_eatvj"]
-resource_name = "flaslight"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.8, 1.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(-1.54811, -0.44855, -0.34383), Vector3(0.226893, -2.97404, -0.34383), Vector3(1.24966, -0.436332, -1.69821)]
-}
-
-[sub_resource type="Animation" id="Animation_r8uib"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-1.54811, -0.44855, -0.34383)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_3adqk"]
-_data = {
-"RESET": SubResource("Animation_r8uib"),
-"flaslight": SubResource("Animation_eatvj")
-}
-
 [node name="Weapon" type="Node3D"]
 transform = Transform3D(-0.992541, 0.12189, 0.0024289, 0.00451701, 0.0168577, 0.999848, 0.12183, 0.992401, -0.0172825, 0.13, -0.165, -0.22)
 script = ExtResource("1_glfna")
 WEAPON_TYPE = ExtResource("2_mjg5x")
+
+[node name="Flashlight" type="Node3D" parent="."]
+transform = Transform3D(1, -7.45058e-09, 0, -7.45058e-09, 1, 1.86265e-09, -2.32831e-10, 0, 1, 0, 0, 0)
+
+[node name="flashlight0417" parent="Flashlight" instance=ExtResource("5_oager")]
+transform = Transform3D(1.05329, 1.06788, -0.014756, -0.0114702, 0.0320349, 1.49962, 1.06792, -1.0529, 0.0306608, -0.369723, 0.0871998, 0.0165451)
+script = ExtResource("6_mm2e1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Flashlight/flashlight0417"]
+libraries = {
+"": SubResource("AnimationLibrary_3adqk")
+}
 
 [node name="WeaponMesh" type="MeshInstance3D" parent="."]
 unique_name_in_owner = true
@@ -96,12 +155,3 @@ unique_name_in_owner = true
 visible = false
 cast_shadow = 3
 mesh = SubResource("ArrayMesh_81mr8")
-
-[node name="flashlight0417" parent="." instance=ExtResource("5_oager")]
-transform = Transform3D(1.05329, 1.06788, -0.0147579, -0.0114717, 0.0320392, 1.49962, 1.06792, -1.0529, 0.0306646, -0.368344, 0.0984253, 0.0163491)
-script = ExtResource("6_mm2e1")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="flashlight0417"]
-libraries = {
-"": SubResource("AnimationLibrary_3adqk")
-}
