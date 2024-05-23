@@ -1,4 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://b8vx3f800yiek"]
+[gd_scene load_steps=8 format=3 uid="uid://b8vx3f800yiek"]
+
+[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="1_dnag4"]
 
 [sub_resource type="Shader" id="Shader_1i7e3"]
 code = "// NOTE: Shader automatically converted from Godot Engine 4.1.1.stable's StandardMaterial3D.
@@ -118,11 +120,19 @@ subdivide_depth = 100
 
 [node name="main" type="Node3D"]
 
-[node name="water" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_xx43k")
+[node name="water" type="Node3D" parent="."]
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="water" type="MeshInstance3D" parent="water"]
+mesh = SubResource("BoxMesh_xx43k")
+skeleton = NodePath("../..")
+
+[node name="Camera3D" type="Camera3D" parent="water"]
 transform = Transform3D(1, 0, 0, 0, -0.00457278, 0.99999, 0, -0.99999, -0.00457278, 0, 82.1048, 0)
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="water"]
 transform = Transform3D(1, 0, 0, 0, 0.265001, 0.964248, 0, -0.964248, 0.265001, 2.37323, 219.621, 0)
+
+[node name="island" type="Node3D" parent="."]
+
+[node name="HTerrain" type="Node3D" parent="island"]
+script = ExtResource("1_dnag4")

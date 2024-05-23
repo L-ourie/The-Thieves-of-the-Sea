@@ -30,6 +30,10 @@ window/size/always_on_top=true
 
 movie_writer/movie_file="D:/StayAtHomeDev/Video Production/Social Video Teasers/Twitter/FPS Project/FPS.avi"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/zylann.hterrain/plugin.cfg")
+
 [input]
 
 move_forward={
