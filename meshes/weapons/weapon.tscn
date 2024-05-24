@@ -1,7 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://v8g6dodhumyk"]
+[gd_scene load_steps=15 format=3 uid="uid://v8g6dodhumyk"]
 
 [ext_resource type="Script" path="res://meshes/weapons/init_weapon.gd" id="1_glfna"]
-[ext_resource type="Resource" uid="uid://evw4ypfnw256" path="res://meshes/weapons/crowbar/crowbar.tres" id="2_mjg5x"]
 [ext_resource type="ArrayMesh" uid="uid://c4fnn07t5jqdl" path="res://meshes/weapons/crowbar/mesh_crowbar.res" id="3_blimu"]
 [ext_resource type="Shader" path="res://meshes/weapons/weapon_shadow.gdshader" id="4_b2j6q"]
 [ext_resource type="PackedScene" uid="uid://cuciejw1mnbdr" path="res://flashlight.tscn" id="5_oager"]
@@ -131,13 +130,12 @@ shadow_mesh = SubResource("ArrayMesh_k8gve")
 [node name="Weapon" type="Node3D"]
 transform = Transform3D(-0.992541, 0.12189, 0.0024289, 0.00451701, 0.0168577, 0.999848, 0.12183, 0.992401, -0.0172825, 0.13, -0.165, -0.22)
 script = ExtResource("1_glfna")
-WEAPON_TYPE = ExtResource("2_mjg5x")
 
 [node name="Flashlight" type="Node3D" parent="."]
 transform = Transform3D(1, -7.45058e-09, 0, -7.45058e-09, 1, 1.86265e-09, -2.32831e-10, 0, 1, 0, 0, 0)
 
 [node name="flashlight0417" parent="Flashlight" instance=ExtResource("5_oager")]
-transform = Transform3D(1.05329, 1.06788, -0.014756, -0.0114702, 0.0320349, 1.49962, 1.06792, -1.0529, 0.0306608, -0.369723, 0.0871998, 0.0165451)
+transform = Transform3D(1.05329, 1.06788, -0.014756, -0.0114702, 0.0320349, 1.49962, 1.06792, -1.0529, 0.0306607, -0.369723, 0.0871998, 0.0165451)
 script = ExtResource("6_mm2e1")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Flashlight/flashlight0417"]
