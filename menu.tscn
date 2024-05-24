@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cthp85co8wmqs"]
+
+[node name="menu" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1928.0
+offset_bottom = 1084.0
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 604.0
+offset_right = 764.0
+offset_bottom = 796.0
+theme_override_font_sizes/font_size = 75
+text = "New Game"
+
+[node name="Button2" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 1087.0
+offset_top = 608.0
+offset_right = 1651.0
+offset_bottom = 800.0
+theme_override_font_sizes/font_size = 75
+text = "Quit"

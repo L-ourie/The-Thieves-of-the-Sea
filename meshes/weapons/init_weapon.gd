@@ -24,7 +24,7 @@ func _input(event):
 		load_weapon()
 	
 func load_weapon() -> void:
-	weapon_mesh.mesh = WEAPON_TYPE.mesh # Set weapon mesh
+	weapon_mesh.mesh = WEAPON_TYPE.mesh # Set weapon meshw
 	position = WEAPON_TYPE.position # Set weapon position
 	rotation_degrees = WEAPON_TYPE.rotation	# Set weapon rotation
 	weapon_shadow.visible = WEAPON_TYPE.shadow # Turn shadow on/off
