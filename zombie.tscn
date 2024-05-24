@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bkp7je67ogtga" path="res://meshes/Zombie.glb" id="1_l5eo2"]
 
 [node name="Zombie" instance=ExtResource("1_l5eo2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.649114)
 
 [node name="Skeleton3D" parent="Armature" index="0"]
 bones/0/position = Vector3(5.71833, 34.0922, -105.419)
